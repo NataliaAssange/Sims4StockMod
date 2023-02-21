@@ -2,6 +2,7 @@
 def price():
     import random
     from typing import Any
+    #from （文件名） import family_housefund
     global BANA
     BANA=random.randint(1,500)
     print ('欢迎光临模拟证券交易所' \
@@ -9,7 +10,7 @@ def price():
             '\nBANA Banana Inc. ', BANA, \
         '\n投资有风险，入市须谨慎！')
     return BANA,
-money=100000  #后期改成用command get到的家庭资金
+money=family_housefund  #后期改成用command get到的家庭资金
 qty0=0
 hold0=0
 #买
@@ -66,17 +67,3 @@ def sell():
         else:
             print('对不起，输入无效，请输入一个正整数')
     return money, qty0
-#以下为调试
-price()
-buy()
-price()
-buy()
-view()
-price()
-sell()
-price()
-view()
-price()
-sell()
-price()
-view()
